@@ -33,9 +33,6 @@ export default function Heading({ scrollToSpecials, scrollToAbout }) {
             {navbarOpen ? <Navigation device="mobile" onSpecialsClick={scrollToSpecials} onAboutClick={scrollToAbout}/> : ""}
           </nav>
           <section className="header-title">
-            <h1>Oasis Diner</h1>
-            <br></br>
-            <br></br>
             <h3>From American Plates to Espresso Delights!</h3>
           </section>
           <article className="call-to-action">

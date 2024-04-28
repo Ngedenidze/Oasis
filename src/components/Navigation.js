@@ -20,6 +20,9 @@ export default function Navigation({ device, onSpecialsClick, onAboutClick }) {
             alt="Little Lemon logo"
             className="nav-image"
           ></img>
+          <section className="header-title">
+            <h1>Oasis Diner</h1>
+          </section>
         </Link>
       )}
       <a
@@ -33,8 +36,6 @@ export default function Navigation({ device, onSpecialsClick, onAboutClick }) {
       <Link className="hover-effect" to="/reservations">
         <h1>Reservations</h1>
       </Link>
-        
-     
     </menu>
   );
 }
