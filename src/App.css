@@ -59,11 +59,11 @@ Link:link {
 .action-button {
   position: relative;
   top: 10%;
-  background-color: rgba(172, 166, 133, 0.3);
+  background-color: rgba(172, 166, 133, 0.5);
   color: white;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 0.2rem;
-  border: white 3px solid;
+  border: white 4px double;
   font-family:'Times New Roman', Times, serif;
   padding: 2rem 4rem;
   font-size: 2rem;
@@ -83,7 +83,7 @@ Link:link {
 }
 
 .subsection {
-  margin-top: -2rem;
+  margin-top: 0rem;
 }
 
 /* NAVBAR STYLING */
@@ -122,6 +122,7 @@ Link:link {
 }
 .hover-effect:hover {
   background-color: rgba(60, 59, 74, 0.4);
+  height: 100%;
   transition: 0.25s;
 }
 
@@ -142,6 +143,9 @@ Link:link {
   padding: 0;
   background-position: center;
   overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .header-box::before {
@@ -165,18 +169,18 @@ Link:link {
 .header-title{
   display: inline; 
   position: relative; 
+  top: 0rem;
   text-align: center;
-  color: rgba(42, 38, 100); 
-  border: 1px solid #2a2664;
+  color: rgba(55, 29, 149, 0.85); 
   
 }
 .header-title > h3{
-  color: rgba(245, 245, 245);
+  color: rgba(42, 38, 100);
   font-family:'Times New Roman', Times, serif;
-  text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
-  font-size: 2.5rem;
+  text-shadow: 0px 5px 40px rgba(0,0,0,0.5);
+  font-size: 1.5rem;
   margin-top: 0rem;
-  margin-bottom: 0rem;
+  margin-bottom: 2rem;
 }
 .call-to-action {
   position: relative;
@@ -195,8 +199,9 @@ Link:link {
   position: relative;
   left: 20%;
 }
-.call-to-action > .hero-text > h1 {
+.header-title > h1 {
   font-size: 3.5rem;
+  
   margin-top: 0rem;
   margin-bottom: 3rem;
 }
@@ -205,7 +210,8 @@ Link:link {
   font-size: 6.5rem;
   font-family:'Times New Roman', Times, serif;
   /* text-shadow: 4px 4px 8px #121212b7; */
-  -webkit-text-stroke: 0.5px #110d45;
+  -webkit-text-stroke: 1px #2a2664;
+  text-shadow: inline 0px 10px 50px rgba(0, 0, 0, 0.72);
   margin-top: 0rem;
   margin-bottom: -3rem;
 }
@@ -231,19 +237,20 @@ Link:link {
 .arrow{
   position: absolute;
   background-color: transparent;
-  top: calc(100vh - 10rem);
-  left: calc(50% - 3rem);
-  height: 80px;
+  top: calc(100vh - 12rem);
+  left: calc(50% - 4rem);
+  height: 120px;
   padding: 1rem;
   border-radius: 50%;
 }
-.arrow > svg{
-  fill: transparent;
-  display: inline-flex;
-}
 .arrow > svg > path{
-  stroke: white;
+  stroke: rgba(255, 255, 255, 0.7);
   margin-top: 10px;
+  stroke-width: 1;
+  fill: none; 
+  filter: drop-shadow(0px 0px 0px rgba(255, 255, 255, 0.7))
+          drop-shadow(0px 3px 0 rgba(255, 255, 255, 0.7))
+          drop-shadow(0px 6px 0 rgba(255, 255, 255, 0.7));
 }
 
 /* SPECIALS */

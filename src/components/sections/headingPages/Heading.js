@@ -39,9 +39,10 @@ export default function Heading({ scrollToRef }) {
           </nav>
           <section className="header-title">
             <h1>Oasis Diner</h1>
-            <h2>Butler, NJ</h2>
+            {/* <h2>Butler, NJ</h2> */}
             <br></br>
-            <h3>Where Espresso Meets American Comfort!</h3>
+            <br></br>
+            <h3>From American Plates to Espresso Delights!</h3>
           </section>
           <article className="call-to-action">
             <section>
