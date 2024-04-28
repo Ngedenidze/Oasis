@@ -1,22 +1,65 @@
-import {Link} from 'react-router-dom';
-export default function Heading() {
-    return (
-        <header>
-            <article className="call-to-action">
-                <section className="hero-text">
-                    <h1>Oasis Diner</h1>
-                    <h2>Butler</h2>
-                    <p className="subsection">Visit us at Oasis Diner, your Butler, NJ spot for American dining with a global twist 
-                    and specialty espresso drinks. Experience our inviting selection
-                    and rich flavors in a place where local charm blends with international tastes.</p>
-                    <br></br>
-                    <a className="action-button" href="https://order.toasttab.com/online/oasis-diner-1277-new-jersey-23" target="_blank" rel="noopener noreferrer">Order Now</a>
-                </section>
+import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import Navigation from "../../Navigation";
+import Hamburger from "../../../assets/hamburger.png";
+import Close from "../../../assets/close.png";
+import ScrollDownArrow from "./ScrollDownArrow";
+import { useRef } from "react";
 
-                <section className="hero-image">
-                    <img src={require('../../../assets/food/food1.png')} alt="Little Lemon restaurant cuisine"></img>
-                </section>
-            </article>
+export default function Heading({ scrollToRef }) {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  function handleToggle() {
+    setNavbarOpen(!navbarOpen);
+  }
+
+  const handleClick = () => {
+    scrollToRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  return (
+    <>
+      <header>
+        <section className="header-box">
+          <nav>
+            <nav className="burger">
+              <img
+                src={require("../../../assets/nav-logo.png")}
+                alt="Oasis Diner logo"
+                className="nav-image"
+              ></img>
+
+              <button className="burger-icon" onClick={handleToggle}>
+                <img
+                  src={navbarOpen ? Close : Hamburger}
+                  alt="Navigation Bar"
+                />
+              </button>
+            </nav>
+            <Navigation device="desktop" />
+            {navbarOpen ? <Navigation device="mobile" /> : ""}
+          </nav>
+          <section className="header-title">
+            <h1>Oasis Diner</h1>
+            <h2>Butler, NJ</h2>
+            <br></br>
+            <h3>Where Espresso Meets American Comfort!</h3>
+          </section>
+          <article className="call-to-action">
+            <section>
+              <a
+                className="action-button"
+                href="https://order.toasttab.com/online/oasis-diner-1277-new-jersey-23"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Order Now
+              </a>
+            </section>
+          </article>
+        </section>
+        <button onClick={handleClick} className="arrow">
+          <ScrollDownArrow />
+        </button>
       </header>
-    );
+    </>
+  );
 }
