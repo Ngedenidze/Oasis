@@ -5,7 +5,7 @@ export default function Footer() {
       <menu>
         <li className="img-footer">
           <img
-            src={require("../assets/footer-logo.png")}
+            src={require("../assets/footer-logo1.png")}
             alt="Little Lemon logo"
           ></img>
         </li>
@@ -30,17 +30,18 @@ export default function Footer() {
         <li>
           <h1 className="footer-header">Contact</h1>
           <ul className="footer-links">
-            <li>2395 Maldove Way,</li>
-            <li>Chicago Illinois</li>
+            <li>North, 1277 NJ-23</li>
+            <li>Butler, NJ</li>
+            <li>07405</li>
             <br></br>
-            <li>(629)-243-6827</li>
+            <li>+1(973)291-8801</li>
             <br></br>
             <a
-              href="mailto: info@littlelemon.com"
+              href="mailto: info@oasisdiner.com"
               target="_blank"
               rel="noreferrer"
             >
-              info@littlelemon.com
+              info@oasisdinernj.com
             </a>
           </ul>
         </li>
@@ -48,14 +49,14 @@ export default function Footer() {
           <h1 className="footer-header">Connect</h1>
           <ul className="footer-links">
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/dineroasis"
               target="_blank"
               rel="noreferrer"
             >
               Facebook
             </a>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/dineroasis"
               target="_blank"
               rel="noreferrer"
             >

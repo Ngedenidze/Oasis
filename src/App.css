@@ -51,11 +51,11 @@ Link:visited,
 a:link,
 Link:link {
   text-decoration: none;
-  color: black;
+  color: #2a2664;
 }
 
 .action-button {
-  background-color: #f4ce14;
+  background-color: #F4CE14;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 0.2rem;
   font-family: "Karla";
@@ -97,9 +97,16 @@ Link:link {
   display: none;
   grid-template-columns: 5fr 1fr;
 }
+.hover-effect{
+  cursor:pointer;
+}
+.hover-effect:hover {
+  background-color: #F4CE14;
+  transition: 0.25s;
+}
 
 .hover-effect:hover {
-  background-color: #f4ce14;
+  background-color: #F4CE14;
   transition: 0.25s;
 }
 
@@ -168,16 +175,31 @@ Link:link {
 .menu-card {
   background-color: #edefee;
   padding-bottom: 1rem;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-card > figure{
+  margin: 0;
+}
+.menu-card figure figcaption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; 
 }
 
-.menu-card > img {
+.menu-card > figure > img{
   height: 25vh;
   width: 100%;
   object-fit: cover;
 }
 
 .menu-card-content {
-  margin: 0.5rem 2rem 1rem 2rem;
+  margin: 0.5rem 2rem 1rem 1rem;
 }
 
 .menu-card-content > h1 {
@@ -190,11 +212,16 @@ Link:link {
   margin: 0;
 }
 
+
 .special-button {
-  background-color: #f4ce14;
+  display: block;
+  max-width: 10rem;
+  margin-left: 1rem;
+  background-color: #F4CE14;
   border-radius: 0.2rem;
   font-size: 1.5rem;
   padding: 0.5rem;
+  position: relative;
 }
 
 .special-button:hover {
@@ -203,7 +230,12 @@ Link:link {
   border-style: solid;
   border-width: 0.1rem;
   border-color: black;
-  transition: 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.special-button:focus {
+  outline: none;
+  cursor: pointer;
 }
 
 .specials-carousel {
@@ -233,13 +265,49 @@ Link:link {
 }
 
 .testimonial-card {
+  display: flex;
+  flex-direction: column;
   background-color: #edefee;
   padding: 1rem 1rem 0 1rem;
+  max-width: 20rem;
+}
+.testimonial-card > .description {
+  margin-top: 1rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; 
+  line-height: 1.2em;
 }
 
+.testimonial-card > .description > p {
+  font-size: 1rem;
+  margin: 0; 
+  overflow: hidden; 
+  display: block; 
+}
+.testimonial-card > .ratings{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .testimonial-card > img {
   width: 3rem;
   height: 3rem;
+  object-fit: contain;
+}
+.testimonial-card > a{
+  text-align: right;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1.5rem;
+
+}
+.testimonial-card > .ratings > span {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  font-size: 3rem;
   object-fit: contain;
 }
 
@@ -253,7 +321,7 @@ Link:link {
 
 /* ABOUT */
 .about-us {
-  background-color: #f4ce14;
+  background-color: #F4CE14;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1.25rem 5rem 2.5rem 5rem;
@@ -294,7 +362,7 @@ Link:link {
 /* FOOTER STYLING */
 footer {
   min-height: 13rem;
-  background-color: #495e57;
+  background-color: #2a2664;
   color: #ffffff;
   padding-bottom: 1rem;
   margin-top: -1.4rem;
@@ -344,7 +412,7 @@ footer > menu {
   transform: translateY(-50%);
   margin-right: 3rem;
 
-  background-color: white;
+  background-color: #2a2664;
   padding: 0.5rem;
 }
 
@@ -417,7 +485,7 @@ footer > menu {
 }
 
 .redirect-button:hover {
-  background-color: #f4ce14;
+  background-color: #F4CE14;
   color: #464646 !important;
   transition: 0.2s;
 }

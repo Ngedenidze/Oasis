@@ -31,9 +31,14 @@ export default function Navigation(props) {
       <Link className="hover-effect" to="/reservations">
         <h1>Reservations</h1>
       </Link>
-      <Link className="hover-effect" to="/order">
+      <a
+        className="hover-effect"
+        href="https://order.toasttab.com/online/oasis-diner-1277-new-jersey-23"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <h1>Order</h1>
-      </Link>
+      </a>
       <Link className="hover-effect" to="/login">
         <h1>Login</h1>
       </Link>
