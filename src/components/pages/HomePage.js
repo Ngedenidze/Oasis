@@ -6,16 +6,21 @@ import About from "../sections/headingPages/About";
 
 export default function Homepage() {
   const specialsRef = useRef(null);
-
+  const aboutRef = useRef(null);
+  const handleAboutClick = () => {
+    aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
-      <Heading scrollToRef={specialsRef} />
+      <Heading scrollToSpecials={specialsRef} scrollToAbout={handleAboutClick} />
       <main>
         <section ref={specialsRef}>
           <Specials />
         </section>
         <Testimonials />
-        <About />
+        <section ref={aboutRef}>
+          <About />
+        </section>
       </main>
     </>
   );

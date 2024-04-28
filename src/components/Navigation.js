@@ -1,23 +1,17 @@
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
-export default function Navigation(props) {
+export default function Navigation({ device, onSpecialsClick, onAboutClick }) {
   return (
-    <menu className={`navbar-menu ${props.device}`}>
+    <menu className={`navbar-menu ${device}`}>
       
       <Link className="hover-effect" to="/">
         <h1>Home</h1>
       </Link>
-      <Link className="hover-effect" to="/">
-        <h1>Login</h1>
-      </Link>
-      <a
-        className="hover-effect"
-        href="https://order.toasttab.com/online/oasis-diner-1277-new-jersey-23"
-        target="_blank"
-        rel="noopener noreferrer"
-      > <h1>Order</h1> </a>
-
-      {props.device === "mobile" ? (
+      <a className="hover-effect" onClick={onAboutClick}>
+        <h1>About</h1>
+      </a>
+      {device === "mobile" ? (
         ""
       ) : (
         <Link to="/">
@@ -39,10 +33,7 @@ export default function Navigation(props) {
       <Link className="hover-effect" to="/reservations">
         <h1>Reservations</h1>
       </Link>
-
-        <Link className="hover-effect" to="/about">
-        <h1>About</h1>
-      </Link>
+        
      
     </menu>
   );

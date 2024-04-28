@@ -30,6 +30,9 @@ body {
   margin: 0; /* removes white border around website*/
   padding: 0;
   margin-top: -22px;
+  background-image: url("../src/assets/food/triangles_pattern.webp"); /* Sets the background image */
+  background-size: auto; /* Keeps the image at its original size */
+  background-repeat: repeat; /* Makes the image repeat */
 }
 
 menu {
@@ -88,7 +91,7 @@ Link:link {
 
 /* NAVBAR STYLING */
 .navbar-menu {
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
   background-color: #4646462d;
   border-bottom: 0.5px solid #2a2664;
@@ -273,12 +276,14 @@ Link:link {
 }
 
 .specials-cards {
+  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2vw;
 }
 
 .menu-card {
+  border: #110d45 0.5px solid;
   background-color: #edefee;
   padding-bottom: 1rem;
   display: inline-flex;
@@ -363,6 +368,7 @@ Link:link {
 }
 
 .testimonials-cards {
+  
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 1fr;
@@ -371,6 +377,7 @@ Link:link {
 }
 
 .testimonial-card {
+  border: #110d45 0.5px solid;
   display: flex;
   flex-direction: column;
   background-color: #edefee;

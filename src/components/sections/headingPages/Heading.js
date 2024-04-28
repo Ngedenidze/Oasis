@@ -1,20 +1,15 @@
-import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import Navigation from "../../Navigation";
 import Hamburger from "../../../assets/hamburger.png";
 import Close from "../../../assets/close.png";
 import ScrollDownArrow from "./ScrollDownArrow";
-import { useRef } from "react";
 
-export default function Heading({ scrollToRef }) {
+export default function Heading({ scrollToSpecials, scrollToAbout }) {
   const [navbarOpen, setNavbarOpen] = useState(false);
   function handleToggle() {
     setNavbarOpen(!navbarOpen);
   }
 
-  const handleClick = () => {
-    scrollToRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
   return (
     <>
       <header>
@@ -34,12 +29,11 @@ export default function Heading({ scrollToRef }) {
                 />
               </button>
             </nav>
-            <Navigation device="desktop" />
-            {navbarOpen ? <Navigation device="mobile" /> : ""}
+            <Navigation device="desktop" onAboutClick={scrollToAbout} />
+            {navbarOpen ? <Navigation device="mobile" onSpecialsClick={scrollToSpecials} onAboutClick={scrollToAbout}/> : ""}
           </nav>
           <section className="header-title">
             <h1>Oasis Diner</h1>
-            {/* <h2>Butler, NJ</h2> */}
             <br></br>
             <br></br>
             <h3>From American Plates to Espresso Delights!</h3>
@@ -57,7 +51,7 @@ export default function Heading({ scrollToRef }) {
             </section>
           </article>
         </section>
-        <button onClick={handleClick} className="arrow">
+        <button onClick={() => scrollToSpecials.current?.scrollIntoView({ behavior: "smooth" })} className="arrow">
           <ScrollDownArrow />
         </button>
       </header>
