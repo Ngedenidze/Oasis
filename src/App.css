@@ -393,10 +393,14 @@ Link:link {
 .testimonial-card {
   border: #110d45 0.5px solid;
   display: flex;
+  height: 30rem;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   background-color: #edefee;
   padding: 1rem 1rem 0 1rem;
   max-width: 20rem;
+  white-space: wrap;
 }
 .testimonial-card > .description {
   margin-top: 1rem;
@@ -414,9 +418,14 @@ Link:link {
   display: block; 
 }
 .testimonial-card > .ratings{
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+.testimonial-card > .ratings > h3{
+  font-size: 1.5rem;
 }
 .testimonial-card > img {
   width: 3rem;
@@ -428,7 +437,7 @@ Link:link {
   color: black;
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 1.5rem;
+  margin: 1.5rem 0rem;
 
 }
 .testimonial-card > .ratings > span {

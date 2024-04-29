@@ -5,8 +5,9 @@ export default function TestimonialCard(props) {
   <div className="ratings">
     <img src={Star} alt="Star Icon" />
     <span>5/5</span>
+    <h3>{props.name}</h3>
   </div>
-  <h3>{props.name}</h3>
+  
   <div className="description">
     <p>{props.description}</p>
   </div>
