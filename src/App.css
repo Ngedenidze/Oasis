@@ -36,8 +36,8 @@ body {
   margin: 0; /* removes white border around website*/
   padding: 0;
   margin-top: -22px;
-  background-image: url("../src/assets/food/triangles_pattern.webp"); /* Sets the background image */
-  background-size: auto; /* Keeps the image at its original size */
+  background-image: url("../src/assets/food/background-pattern.jpg"); /* Sets the background image */
+  background-size: 100%; /* Keeps the image at its original size */
   background-repeat: repeat; /* Makes the image repeat */
 }
 
