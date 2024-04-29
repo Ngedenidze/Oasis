@@ -11,10 +11,14 @@ export default function About() {
             </section>
 
             <section className="double-image">
-                <img className="about-1" src={require('../../../assets/food/food3.jpeg')} alt="Little Lemon restaurant cuisine 1"></img>
-                <img className="about-2" src={require('../../../assets/food/food2.jpeg')} alt="Little Lemon restaurant cuisine 2"></img>
+            <img className="about-2" src={require('../../../assets/interior2.jpg')} alt="Oasis Diner Interior"></img>
+               
             </section>
-            <section className="hero-text">
+            <section className="double-image">
+                <img className="about-1" src={require('../../../assets/interior.jpg')} alt="Oasis Diner Interior"></img>
+               
+            </section>
+            <section className="hero-text-2">
               <h1>Opening Hours</h1>
               <br></br>
               <p className="subsection">

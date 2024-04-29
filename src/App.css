@@ -1,6 +1,12 @@
 * {
   font-family: "Markazi Text", "Karla", serif;
 }
+@font-face {
+  font-family: 'Valentine Font';
+  src: url('./assets/fonts/Sweety\ Valentine.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 label,
 input,
@@ -186,9 +192,9 @@ Link:link {
 }
 .header-title > h3{
   color: white;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family:'Valentine Font', 'Times New Roman', Times, serif;
   text-shadow: 2px 5px 40px rgba(0,0,0,0.8);
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   max-width: 30rem;
   text-overflow: clip;
   margin-top: 10rem;
@@ -444,17 +450,39 @@ Link:link {
 .about-us {
   background-color: #F4CE14;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
   padding: 1.25rem 5rem 2.5rem 5rem;
   min-height: 22rem;
   margin-bottom: -1rem;
-  grid-gap: 25vw;
+  height: 100vh;
 }
 
 .about-subtext {
   margin-top: -1.5rem;
 }
-
+.about-us > .hero-text, .about-us > .hero-text-2{
+  margin-left: 1rem;
+  text-align: left;
+}
+.about-us > .hero-text-2{
+  margin-left: 10rem;
+  text-align: left;
+}
+ 
+.about-us > .hero-text > h1 , .about-us > .hero-text-2 > h1{
+   font-size: 3.5rem;
+   margin-bottom: 0;
+}
+.about-us > .hero-text > h2, .about-us > .hero-text-2 > h2{
+  margin-bottom: 4rem;
+  margin-top: 0rem;
+}
+.about-us > .hero-text > p, .about-us > .hero-text-2 > p{
+  font-size: 1.3rem;
+}
 .double-image {
   max-height: 18rem;
   position: relative;
@@ -463,12 +491,13 @@ Link:link {
 }
 
 .double-image > img {
-  width: 60%;
+  width: 70%;
   height: 100%;
   object-fit: cover;
 }
 
 .about-1 {
+  margin-left: -1rem;
   position: relative;
   top: 0;
   left: 0;
