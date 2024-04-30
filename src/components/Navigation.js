@@ -21,7 +21,7 @@ export default function Navigation({ device, onSpecialsClick, onAboutClick }) {
             className="nav-image"
           ></img>
           <section className="header-title">
-            <h1>Oasis Diner</h1>
+            <h1>OASIS DINER</h1>
           </section>
         </Link>
       )}

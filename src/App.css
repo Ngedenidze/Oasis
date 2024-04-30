@@ -1,6 +1,7 @@
 * {
   font-family: "Markazi Text", "Karla", serif;
 }
+
 @font-face {
   font-family: 'Valentine Font';
   src: url('./assets/fonts/Sweety\ Valentine.otf') format('woff2');
@@ -8,6 +9,14 @@
   font-style: normal;
 }
 
+:root {
+  --blue-faded: rgb(13, 22, 73, 0.75);
+  --blue-more-faded: rgb(13, 22, 73, 0.3);
+  --blue-full: rgb(13, 22, 73);
+  --blue-little-fade: rgb(13, 22, 73, 0.9);
+  --brown-faded: rgb(207, 129, 15, 0.75);
+  --brown-full: rgb(207, 129, 15);
+}
 label,
 input,
 select,
@@ -36,8 +45,8 @@ body {
   margin: 0; /* removes white border around website*/
   padding: 0;
   margin-top: -22px;
-  background-image: url("../src/assets/food/background-pattern.jpg"); /* Sets the background image */
-  background-size: 100%; /* Keeps the image at its original size */
+  background-image: url("../src/assets/background-pattern.jpg"); /* Sets the background image */
+  background-size: auto; /* Keeps the image at its original size */
   background-repeat: repeat; /* Makes the image repeat */
 }
 
@@ -83,10 +92,8 @@ Link:link {
 }
 
 .action-button:hover {
-  background-color: #2a2664;
+  background-color: var(--blue-little-fade);
   color: #eeeeee;
-  border-style: solid;
-  border-width: 3px;
   border-color: #edefee;
   transition: 0.2s;
 }
@@ -100,14 +107,19 @@ Link:link {
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
   background-color: #4646462d;
-  border-bottom: 0.5px solid #2a2664;
+  border-bottom: 0.5px solid var(--blue-full);
   box-shadow: 0px 1px 10px #464646;
+}
+
+.reserve-table .navbar-menu{
+  background-color: rgb(207, 129, 15, 0.8);
+  
 }
 
 .navbar-menu > li,
 .navbar-menu > a,
 .navbar-menu > Link {
-  color: white;
+  color: var(--blue-full);
   text-align: center;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -121,7 +133,7 @@ Link:link {
   justify-content: center;
 }
 .navbar-menu > a:hover{
-  color: #2a2664;
+  color: white;
 }
 
 .mobile {
@@ -136,7 +148,7 @@ Link:link {
   cursor:pointer;
 }
 .hover-effect:hover {
-  background-color: rgba(60, 59, 74, 0.4);
+  background-color: var(--blue-more-faded);
   height: 100%;
   transition: 0.25s;
 }
@@ -187,7 +199,9 @@ Link:link {
   text-align: center;
   top: 0rem;
   justify-content: center;
-  color: rgba(55, 29, 149, 0.85); 
+  color: var(--blue-full); 
+  text-shadow: -1px 3px 1px var(--brown-full);
+
   
 }
 .header-title > h3{
@@ -227,7 +241,7 @@ Link:link {
   font-size: 2rem;
   font-family:'Times New Roman', Times, serif;
   /* text-shadow: 4px 4px 8px #121212b7; */
-  -webkit-text-stroke: 1px #2a2664;
+  -webkit-text-stroke: 1px var(--blue-faded);
   text-shadow: inline 0px 10px 50px rgba(0, 0, 0, 0.72);
   margin-top: 0rem;
   margin-bottom: -1rem;
@@ -251,6 +265,19 @@ Link:link {
   height: 100%;
   object-fit: cover;
 }
+/* Keyframes for the bounce effect */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
 .arrow{
   position: absolute;
   background-color: transparent;
@@ -259,6 +286,7 @@ Link:link {
   height: 120px;
   padding: 1rem;
   border-radius: 50%;
+  animation: bounce 2s infinite;
 }
 .arrow > svg > path{
   stroke: rgba(255, 255, 255, 0.7);
@@ -278,15 +306,30 @@ Link:link {
   animation-name: slideDownFade;
 }
 
-.specials-topbar {
+.specials-topbar, .testimonials-topbar {
+  text-align: center;
   align-items: center;
   margin-bottom: 2rem;
+  
+}
+.specials-topbar > div, .testimonials-topbar > div{
+  background-color: var(--blue-little-fade);
+  display: inline-flex;
+  margin-top: 1rem;
+  height: 6rem;
+  color: var(--brown-full);
+  border: double 0.5rem var(--blue-full);
+}
+.testimonials-topbar{
+  display: block;
+  text-align: center;
 }
 
-.specials-topbar > h1 {
-  font-size: 2.5rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+.specials-topbar > div > h1, .testimonials-topbar > div > h1 {
+  font-size: 3rem;
+  margin:1rem;
+  padding: 0rem;
+  
 }
 
 .specials-cards {
@@ -297,7 +340,7 @@ Link:link {
 }
 
 .menu-card {
-  border: #110d45 0.5px solid;
+  border: #110d45 0.2rem double;
   background-color: #edefee;
   padding-bottom: 1rem;
   display: inline-flex;
@@ -391,7 +434,7 @@ Link:link {
 }
 
 .testimonial-card {
-  border: #110d45 0.5px solid;
+  border: #110d45 0.2rem double;
   display: flex;
   height: 30rem;
   flex-direction: column;
@@ -461,8 +504,8 @@ Link:link {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 40px;
+  grid-column-gap: 2vh;
+  grid-row-gap: 2vh;
   padding: 1.25rem 5rem 2.5rem 5rem;
   min-height: 22rem;
   margin-bottom: -1rem;
@@ -482,7 +525,7 @@ Link:link {
 }
  
 .about-us > .hero-text > h1 , .about-us > .hero-text-2 > h1{
-   font-size: 3.5rem;
+   font-size: 2rem;
    margin-bottom: 0;
 }
 .about-us > .hero-text > h2, .about-us > .hero-text-2 > h2{
@@ -490,10 +533,10 @@ Link:link {
   margin-top: 0rem;
 }
 .about-us > .hero-text > p, .about-us > .hero-text-2 > p{
-  font-size: 1.3rem;
+  font-size: 2vh;
 }
 .double-image {
-  max-height: 18rem;
+  max-height: 25vh;
   position: relative;
   top: 4rem;
   left: 2rem;
@@ -599,14 +642,49 @@ footer > menu {
   font-size: 25px;
   border-radius: 0.5rem;
 }
+.reservation-block .reservation-form {
+  border: double var(--blue-full) 0.5rem;
+  max-width: 40rem;
+  margin: 4rem auto;
+  padding: 20px;
+  border-radius: 2rem;
+  background-color: var(--blue-full);
+  box-shadow:inset 0 0 10px #000000;
+  color: white;
+  height: 35rem;
+}
 
+#comments{
+  max-width: 15rem;
+  height: 10rem;
+
+}
 .reservation-form {
   padding: 2rem 0 0.5rem 0;
-  text-align: center;
+  text-align: left;
+  columns:2;
+
 }
 
 .reservation-form > div {
   margin-bottom: 1.5rem;
+}
+.reservation-form > div {
+  margin-bottom: 1.5rem;
+}
+.reservation-form .action-button{
+    position: relative;
+    left: -35%;
+    top: 4rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.reservation-form .action-button:hover{
+  background-color: wheat;
+  color: var(--blue-full);
+  border-color: var(--brown-full);
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
 }
 
 .confirmation-header {

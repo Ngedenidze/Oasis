@@ -13,7 +13,9 @@ export default function Specials() {
   return (
     <section className="specials">
       <article className="specials-topbar">
-        <h1>Our Menu Specials</h1>
+        <div>
+          <h1>MENU SPECIALS</h1>
+        </div>
       </article>
 
       <section className="specials-cards">

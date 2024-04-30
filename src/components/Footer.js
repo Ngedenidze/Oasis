@@ -13,7 +13,6 @@ export default function Footer() {
           <h1 className="footer-header">Navigation</h1>
           <ul className="footer-links">
             <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
             <a
               href={require("../assets/menu.webp")}
               target="_blank"
@@ -22,8 +21,7 @@ export default function Footer() {
               Menu
             </a>
             <Link to="/reservations">Reservations</Link>
-            <Link to="/order">Order</Link>
-            <Link to="/login">Login</Link>
+            <a href="https://order.toasttab.com/online/oasis-diner-1277-new-jersey-23">Order</a>
           </ul>
         </li>
 
