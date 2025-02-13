@@ -1,6 +1,7 @@
 import Carousel from "./SpecialsCarousel";
 import GreekSalad from "../../../assets/food/greek-salad.webp";
 import LemonDessert from "../../../assets/food/lemon-dessert.webp";
+import Test from "../../../assets/food/test.jpg";
 import CroqueMadame from "../../../assets/food/croque-madame.jpg";
 import SpecialCard from "./CardInfo/SpecialCard";
 import AvocadoToast from "../../../assets/food/avocado-toast.jpg";
@@ -21,7 +22,7 @@ export default function Specials() {
       <section className="specials-cards">
         <SpecialCard
           link="https://order.toasttab.com/online/oasis-diner-1277-new-jersey-23/item-red-white-blue_95b56a66-258f-4c96-9f4e-8b7926a158ee"
-          image={RedWhiteBlue}
+          image={Test}
           name="Red, White & Blue"
           price="$14.95"
           description="Belgian waffle topped with strawberries, blueberries & bananas.
@@ -61,6 +62,7 @@ export default function Specials() {
           description="Sausage, scramble eggs, jalapeno peppers, onions, cheddar cheese, flour tortilla.
                  Served with home fries, salsa & sour cream."
         />
+        
       </section>
 
       <section className="specials-carousel">

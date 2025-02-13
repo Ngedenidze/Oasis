@@ -29,11 +29,11 @@ export default function Heading({ scrollToSpecials, scrollToAbout }) {
                 />
               </button>
             </nav>
-            <Navigation device="desktop" onAboutClick={scrollToAbout} />
+            {/* <Navigation device="desktop" onAboutClick={scrollToAbout} /> */}
             {navbarOpen ? <Navigation device="mobile" onSpecialsClick={scrollToSpecials} onAboutClick={scrollToAbout}/> : ""}
           </nav>
           <section className="header-title">
-            <h3>From American Plates to Espresso Delights!</h3>
+            <h3>From Signature Cocktails to Electric Beats!</h3>
           </section>
           <article className="call-to-action">
             <section>
